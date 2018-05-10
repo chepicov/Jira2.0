@@ -17,16 +17,16 @@ public:
 	User();
 	User(char*, char*);
 	virtual ~User();
-	void login();
+	void login(int);
 	void finishSignUp();
 	int getId();
 	char* getEmail();
 	char* getPassword();
-	char* setPassword(char*);
+	void setPassword(char*);
 	char* getFirstName();
-	char* setFirstName(char*);
+	void setFirstName(char*);
 	char* getLastName();
-	char* setLastName(char*);
+	void setLastName(char*);
 	char* getPosition();
 };
 

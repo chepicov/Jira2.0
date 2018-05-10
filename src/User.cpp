@@ -6,12 +6,15 @@
  */
 #include <stdio.h>
 #include <iostream>
+#include <fstream>
 #include "string.h"
 #include <ctime>
 #include <cstdlib>
 
 #include "SHA256.h"
 #include "User.h"
+#include "Admin.h"
+#include "Employee.h"
 
 using namespace std;
 
@@ -44,15 +47,60 @@ User::User(char* newEmail, char* newPosition) {
 	hash = sha256(tempPass);
 	password = new char[strlen(hash) + 1];
 	strcpy(password, hash);
+
+	fstream file;
+	file.open("employees.txt", ios_base::app);
+	file.write(newEmail, sizeof(Employee));
+	file.close();
 }
 
 User::~User() {
 	// TODO Auto-generated destructor stub
 }
 
-void User::login() {
+void User::login(int mode) {
 	char *login = new char[255], *pass = new char[255];
 	bool success = false;
+	fstream file;
+	int n = 0;
+	if (mode == 1) {
+		file.open("employees.txt", ios_base::in);
+		cout << file.is_open();
+		n = sizeof(Employee);
+		file.seekg(0,ios_base::beg);
+		int i = 0;
+		while (!file.eof()) {
+			i++;
+			char *buffer = new char[255];
+			file.get(buffer, n, ' ');
+			cout << buffer;
+		}
+		if (i == 0) {
+			file.close();
+			cout << "В организации нет сотрудников. Обратитесь к админу." << endl << endl;
+			return;
+		}
+	} else {
+		file.open("admins.txt", ios_base::in);
+		cout << file.is_open();
+		n = sizeof(Admin);
+		int i = 0;
+		while (!file.eof()) {
+			i++;
+			char *buffer = new char[255];
+			file.get(buffer, n, ' ');
+			cout << buffer;
+		}
+		if (i == 0) {
+			file.close();
+			cout << "Создание нового администратора" << endl << endl;
+			char *newEmail = new char[255];
+			cout << "Введите email: ";
+			cin >> newEmail;
+			new Admin(newEmail, "admin");
+			cout << "Администратор создан" << endl << endl;
+		}
+	}
 	while (!success) {
 		cout << "Enter email: ";
 		cin >> login;
@@ -60,12 +108,14 @@ void User::login() {
 		cin >> pass;
 		char *hash = new char[255];
 		hash = sha256(pass);
+
 		if ((strcmp(login, email) == 0) && (strcmp(password, hash) == 0)) {
 			cout << "You're in!" << endl << endl;
 			success = true;
 			if (isTempPass) {
 				User::finishSignUp();
 			}
+			file.close();
 		} else {
 			cout << "Email and (or) password are incorrect. Try again please." << endl << endl;
 		}
@@ -107,7 +157,7 @@ char* User::getPassword() {
 	return password;
 }
 
-char* User::setPassword(char* pass) {
+void User::setPassword(char* pass) {
 	isTempPass = false;
 	password = new char[strlen(pass) + 1];
 	strcpy(password, pass);
@@ -117,7 +167,7 @@ char* User::getFirstName() {
 	return firstName;
 }
 
-char* User::setFirstName(char* newFirstName) {
+void User::setFirstName(char* newFirstName) {
 	firstName = new char[strlen(newFirstName) + 1];
 	strcpy(firstName, newFirstName);
 }
@@ -126,7 +176,7 @@ char* User::getLastName() {
 	return lastName;
 }
 
-char* User::setLastName(char* newLastName) {
+void User::setLastName(char* newLastName) {
 	lastName = new char[strlen(newLastName) + 1];
 	strcpy(lastName, newLastName);
 }
