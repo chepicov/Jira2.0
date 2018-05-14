@@ -1,32 +1,28 @@
 /*
  * Employee.h
  *
- *  Created on: May 8, 2018
+ *  Created on: May 14, 2018
  *      Author: mark
  */
 
 #ifndef EMPLOYEE_H_
 #define EMPLOYEE_H_
 
-#include "User.h"
-
-class Employee: public User {
-private:
-	double efficiency;
+class Employee {
 public:
 	Employee();
 	virtual ~Employee();
-	Employee(char*, char*, double);
-
-	void showMenu();
-	double getEfficiency();
-	void setEfficiency(double);
-	void createTask();
-	void assignTaskDev();
-	void assignTaskTest();
-	int reviewTaskTest();
-	int reviewTaskLead();
-	void moveTask();
 };
+
+
+Employee::Employee() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Employee::~Employee() {
+	// TODO Auto-generated destructor stub
+}
+
 
 #endif /* EMPLOYEE_H_ */

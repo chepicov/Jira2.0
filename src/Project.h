@@ -1,7 +1,7 @@
 /*
  * Project.h
  *
- *  Created on: May 8, 2018
+ *  Created on: May 14, 2018
  *      Author: mark
  */
 
@@ -9,21 +9,20 @@
 #define PROJECT_H_
 
 class Project {
-private:
-	int _id, teamId;
-	unsigned int isArchieved;
-	char *name;
 public:
 	Project();
 	virtual ~Project();
-	Project(char *);
-
-	void archiveProject();
-
-	int getId();
-	int getTeamId();
-	unsigned int getIsArchieved();
-	char *getName();
 };
+
+
+Project::Project() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Project::~Project() {
+	// TODO Auto-generated destructor stub
+}
+
 
 #endif /* PROJECT_H_ */
