@@ -11,25 +11,9 @@
 class FileService {
 public:
     template<typename T>
-    static void readObjects(string);
-    template<typename T>
     static void writeObject(T &, string);
     static void clearFile(string);
 };
-
-template<typename T>
-void FileService::readObjects(string fileURL) {
-    T obj;
-    int index = 1;
-
-    ifstream readFile(fileURL);
-    while (readFile.read(reinterpret_cast<char *>(&obj), sizeof(obj))) {
-        cout <<index<<". "<< obj;
-        index++;
-    }
-    readFile.close();
-}
-
 
 template<typename T>
 void FileService::writeObject(T &obj, string fileURL) {

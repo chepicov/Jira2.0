@@ -10,10 +10,7 @@
 
 class Employee : public User {
 private:
-    int id;
-    string email;
     int projectId;
-    string password;
     string position;
     string projectName;
     bool isTeamLeader;
@@ -21,7 +18,11 @@ private:
     double efficiency;
     bool isTempPass;
 public:
+    Employee();
     Employee(const Employee &);
+    Employee(string, string, string, int, string, bool);
+
+    virtual ~Employee() override;
 
     bool isIsTempPass() const;
 
@@ -31,25 +32,9 @@ public:
 
     void setProjectId(int projectId);
 
-    Employee();
-
-    virtual ~Employee() override ;
-
-    Employee(string, string, string, int, string, bool);
-
     string getPosition();
 
-    string getEmail();
-
-    string getPassword();
-
-    int getId() const;
-
     int getProjectId() const;
-
-    friend ostream &operator<<(ostream &, const Employee);
-
-    friend istream &operator>>(istream &, Employee &);
 
     void setEfficiency(int, time_t);
 
@@ -59,15 +44,14 @@ public:
 
     void setProjectName(const string &projectName);
 
+    friend ostream &operator<<(ostream &, const Employee);
+
 };
 
 Employee *currentEmployee;
 
-Employee::Employee(const Employee &obj) {
-    id = obj.id;
-    email = obj.email;
+Employee::Employee(const Employee &obj) : User(obj.id, obj.email, obj.password) {
     projectId = obj.projectId;
-    password = obj.password;
     position = obj.position;
     isTeamLeader = obj.isTeamLeader;
     finishedTaskNumber = obj.finishedTaskNumber;
@@ -79,24 +63,13 @@ string Employee::getPosition() {
     return position;
 }
 
-string Employee::getEmail() {
-    return email;
-}
-
-string Employee::getPassword() {
-    return password;
-}
-
 Employee::Employee() {}
 
 Employee::~Employee() {}
 
-Employee::Employee(string email, string password, string position, int projectId, string projectName, bool isTempPass) {
-    int Id = (rand() % 1000000) % (rand() % 123456) + email.length();
-    this->id = Id;
+Employee::Employee(string email, string password, string position, int projectId, string projectName, bool isTempPass)
+        : User(email, password) {
     this->position = position;
-    this->email = email;
-    this->password = password;
     this->isTempPass = isTempPass;
     this->finishedTaskNumber = 0;
     this->efficiency = 0;
@@ -117,19 +90,9 @@ ostream &operator<<(ostream &out, const Employee obj) {
     return out;
 }
 
-istream &operator>>(istream &in, Employee &obj) {
-    cout << "Введите логин и пароль: ";
-    in >> obj.email >> obj.password;
-    return in;
-}
-
-int Employee::getId() const {
-    return id;
-}
-
 void Employee::setEfficiency(int difficulty, time_t hours) {
     cout << hours << " " << difficulty << endl;
-    double efficiency = (5 * 3600 * difficulty) / hours;
+    double efficiency = difficulty / hours;
     Employee::finishedTaskNumber++;
     Employee::efficiency = (Employee::efficiency + efficiency) / Employee::finishedTaskNumber;
     cout << Employee::finishedTaskNumber << " " << Employee::efficiency << endl;

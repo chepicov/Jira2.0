@@ -14,7 +14,6 @@
 class EmployeeMenu {
 public:
     EmployeeMenu();
-
     virtual ~EmployeeMenu();
 
     // Показать меню сотрудника
@@ -38,13 +37,9 @@ public:
     static void updateEmployee(Employee);
 };
 
-EmployeeMenu::EmployeeMenu() {
-    // TODO Auto-generated constructor stub
-}
+EmployeeMenu::EmployeeMenu() {}
 
-EmployeeMenu::~EmployeeMenu() {
-    // TODO Auto-generated destructor stub
-}
+EmployeeMenu::~EmployeeMenu() {}
 
 void EmployeeMenu::showMenu() {
     bool isCycled = true;

@@ -5,8 +5,8 @@
  *      Author: mark
  */
 
-#ifndef MARK_SHA256_H
-#define MARK_SHA256_H
+#ifndef SHA256_H
+#define SHA256_H
 #include <string>
 #include <cstring>
 #include <fstream>
@@ -196,4 +196,4 @@ string sha256(string input)
     return res;
 }
 
-#endif //MARK_SHA256_H
+#endif //SHA256_H

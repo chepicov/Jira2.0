@@ -5,8 +5,8 @@
  *      Author: mark
  */
 
-#ifndef MARK_TASK_H
-#define MARK_TASK_H
+#ifndef TASK_H
+#define TASK_H
 
 class Task {
 private:
@@ -134,4 +134,4 @@ void Task::setTotalTime(time_t totalTime) {
     Task::totalTime += totalTime;
 }
 
-#endif //MARK_TASK_H
+#endif //TASK_H

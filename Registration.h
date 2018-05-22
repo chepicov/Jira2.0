@@ -5,8 +5,8 @@
  *      Author: mark
  */
 
-#ifndef MARK_REGISTRATION_H
-#define MARK_REGISTRATION_H
+#ifndef REGISTRATION_H
+#define REGISTRATION_H
 
 #include "regex"
 #include "FileService.h"
@@ -60,4 +60,4 @@ void Registration::registration() {
     }
 }
 
-#endif //MARK_REGISTRATION_H
+#endif //REGISTRATION_H

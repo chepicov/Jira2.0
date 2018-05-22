@@ -1,9 +1,13 @@
-//
-// Created by Vadim Sukach on 14.05.2018.
-//
+/*
+ * Login.h
+ *
+ *  Created on: May 14, 2018
+ *      Author: mark
+ */
 
-#ifndef MARK_LOGIN_H
-#define MARK_LOGIN_H
+
+#ifndef LOGIN_H
+#define LOGIN_H
 
 class Login {
 public:
@@ -114,4 +118,4 @@ void Login::loginMenu() {
     } while (isCycled);
 }
 
-#endif //MARK_LOGIN_H
+#endif //LOGIN_H

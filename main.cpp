@@ -3,7 +3,7 @@
 // Author      : Mark
 // Version     :
 // Copyright   : Chepicov Mark
-// Description : Hello World in C++, Ansi-style
+// Description : C++, Ansi-style
 //============================================================================
 #include <iostream>
 #include "string"
