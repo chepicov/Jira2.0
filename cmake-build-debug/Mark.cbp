@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Mark"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/nasta/Downloads/Mark/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/nasta/Downloads/Mark/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/nasta/Downloads/Mark/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Mark">
+				<Option output="/Users/nasta/Downloads/Mark/cmake-build-debug/Mark" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nasta/Downloads/Mark/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 Mark"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Mark/fast">
+				<Option output="/Users/nasta/Downloads/Mark/cmake-build-debug/Mark" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/nasta/Downloads/Mark/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/9.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 Mark/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/nasta/Downloads/Mark/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/nasta/Downloads/Mark/Admin.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/AdminMenu.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/Employee.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/EmployeeMenu.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/Exception.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/FileService.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/Login.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/Project.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/Registration.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/SHA256.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/Task.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/User.h">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/main.cpp">
+			<Option target="Mark"/>
+		</Unit>
+		<Unit filename="/Users/nasta/Downloads/Mark/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
